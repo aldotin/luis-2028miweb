@@ -1,0 +1,160 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #0056b3; /* Un azul vibrante para los encabezados */
+}
+
+/* Navegación */
+nav {
+    background-color: #007bff; /* Azul principal para la barra de navegación */
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu-principal {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu-principal li {
+    display: inline-block; /* Alinea los elementos del menú horizontalmente */
+    margin: 0 15px;
+    position: relative; /* Necesario para el submenú */
+}
+
+.menu-principal li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block; /* Asegura que el enlace ocupe todo el espacio del li */
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+.menu-principal li a:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+    border-radius: 5px;
+}
+
+/* Submenú (dropdown) */
+.submenu {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 100%; /* Coloca el submenú debajo del elemento padre */
+    left: 0;
+    background-color: #ffffff; /* Fondo blanco para el submenú */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+    border-radius: 5px;
+    padding: 5px 0;
+    min-width: 150px; /* Ancho mínimo para el submenú */
+}
+
+.submenu li {
+    display: block; /* Muestra los elementos del submenú verticalmente */
+    margin: 0;
+}
+
+.submenu li a {
+    color: #333; /* Color de texto para el submenú */
+    padding: 10px 15px;
+    white-space: nowrap; /* Evita que el texto del submenú se divida */
+}
+
+.submenu li a:hover {
+    background-color: #e9ecef; /* Gris claro al pasar el ratón en el submenú */
+    color: #007bff;
+}
+
+.dropdown:hover .submenu {
+    display: block; /* Muestra el submenú al pasar el ratón sobre el elemento .dropdown */
+}
+
+/* Encabezado principal */
+header {
+    background-color: #e9ecef; /* Un gris claro para el encabezado */
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #007bff;
+}
+
+header h1 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Contenido principal */
+.contenido-principal {
+    background-color: #ffffff; /* Fondo blanco para las secciones de contenido */
+    padding: 30px 20px;
+    margin: 20px auto; /* Centra las secciones y añade espacio superior/inferior */
+    max-width: 900px; /* Ancho máximo para el contenido */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+.contenido-principal h2 {
+    margin-top: 0;
+    color: #0056b3;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.contenido-principal p {
+    margin-bottom: 15px;
+}
+
+.contenido-principal strong {
+    color: #007bff; /* Resalta las palabras clave en negrita */
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #333; /* Fondo oscuro para el pie de página */
+    color: white;
+    font-size: 0.9em;
+}
+
+/* Media Queries para Responsividad (ejemplo básico) */
+@media (max-width: 768px) {
+    .menu-principal li {
+        display: block; /* Cambia a bloque en pantallas pequeñas */
+        margin: 5px 0;
+    }
+
+    .submenu {
+        position: static; /* Permite que el submenú se muestre normalmente */
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .dropdown:hover .submenu {
+        display: block; /* Asegura que se muestre en pantallas pequeñas */
+    }
+
+    .contenido-principal {
+        margin: 15px 10px; /* Ajusta márgenes en pantallas pequeñas */
+        padding: 20px 15px;
+    }
+}

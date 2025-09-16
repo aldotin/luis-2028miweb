@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiénes Somos - Danzas Típicas</title>
+    <link rel="stylesheet" href="Quienessomos.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #6fb98f 0%, #d0e8d0 100%);
+            color: #2c3e50;
+            margin: 0;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: #ffffffdd;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            max-width: 800px;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #276749;
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #1a202c;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: #276749;
+            font-weight: 700;
+        }
+
+        .image-container {
+            margin-top: 30px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 6px 15px rgba(39, 103, 73, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Quiénes Somos</h1>
+
+        <p>
+            Somos un equipo apasionado por la promoción y preservación de las danzas típicas del Perú, comprometidos con
+            difundir las tradiciones culturales de la <span class="highlight">costa, sierra y selva</span> para el mundo.
+        </p>
+
+        <p>
+            Nuestra misión es conectar a las comunidades artísticas con visitantes nacionales e internacionales, creando
+            experiencias auténticas que enriquezcan el orgullo cultural y fomenten el desarrollo sostenible de nuestras
+            regiones.
+        </p>
+
+        <p>
+            Trabajamos en colaboración con artistas, instituciones públicas y privadas para mantener vivas las expresiones
+            dancísticas que representan la identidad y diversidad del Perú.
+        </p>
+
+        <div class="image-container">
+            <img src="imagenes/fsaf.jpg" alt="Equipo de promoción de danzas típicas" />
+        </div>
+    </div>
+</body>
+
+</html>

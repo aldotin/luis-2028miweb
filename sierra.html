@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sierra</title>
+    <link rel="stylesheet" href="sierra.css">
+    <link rel="stylesheet" href="sierra.js">
+</head>
+<body>
+<header>
+<h1>Danzas Tipicas  de la Sierra Peruana</h1>
+<p>La sierra peruana es una región rica en historia y tradiciones, donde convergen influencias ancestrales andinas y coloniales. Sus danzas expresan una fuerte relación con la tierra y la Pachamama, combinando rituales agrícolas con festividades religiosas que reflejan la identidad cultural de los pueblos andinos.</p>
+</header>
+
+
+  <div class="slideshow">
+    <img id="imagen" src="" alt="Foto actual">
+  </div>
+
+  <script>
+    // Lista de imágenes
+    const imagenes = [
+       "sierra/11.jpg",
+       "sierra/12.jpg",
+       "sierra/13.jpg",
+       "sierra/14.jpg",
+       "sierra/15.jpg"
+  
+    
+      
+      
+    
+    
+  
+    ];
+
+    let indice = 0;
+    const img = document.getElementById("imagen");
+
+    function mostrarSiguienteFoto() {
+      // Cambiar la imagen con opacidad
+      img.style.opacity = 0;
+
+      setTimeout(() => {
+        img.src = imagenes[indice];
+        img.style.opacity = 1;
+
+        indice = (indice + 1) % imagenes.length; // volver al inicio al final
+      }, 500);
+    }
+
+    // Mostrar la primera imagen al cargar
+    mostrarSiguienteFoto();
+
+    // Cambiar imagen cada 3 segundos
+    setInterval(mostrarSiguienteFoto, 3000);
+  </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

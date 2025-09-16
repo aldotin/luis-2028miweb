@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costa</title>
+    <link rel="stylesheet" href="costa.css">
+    <link rel="stylesheet" href="costa.js">
+</head>
+<body>
+<header>
+<h1>Danzas Tipicas  de la Costa Peruaa</h1>
+<p>La costa del Perú se caracteriza por una gran riqueza cultural que mezcla influencias indígenas, africanas y españolas. Sus danzas reflejan alegria, ritmo y energía, muchas de ellas ligadas a fiestas religiosas, celebraciones agrícolas o al foldore popular</p>
+</header>
+
+
+  <div class="slideshow">
+    <img id="imagen" src="" alt="Foto actual">
+  </div>
+
+  <script>
+    // Lista de imágenes
+    const imagenes = [
+       "Costa/1.jpg",
+       "Costa/2.jpg",
+       "Costa/3.jpg",
+       "Costa/4,.jpg",
+       "Costa/5.jpg",
+       "Costa/6.jpg",
+       "Costa/7.jpg",
+     "Costa/8.jpg",
+     "Costa/9.jpg",
+      "Costa/10.jpg"
+  
+    ];
+
+    let indice = 0;
+    const img = document.getElementById("imagen");
+
+    function mostrarSiguienteFoto() {
+      // Cambiar la imagen con opacidad
+      img.style.opacity = 0;
+
+      setTimeout(() => {
+        img.src = imagenes[indice];
+        img.style.opacity = 1;
+
+        indice = (indice + 1) % imagenes.length; // volver al inicio al final
+      }, 500);
+    }
+
+    // Mostrar la primera imagen al cargar
+    mostrarSiguienteFoto();
+
+    // Cambiar imagen cada 3 segundos
+    setInterval(mostrarSiguienteFoto, 3000);
+  </script>
+
+
+
+
+</header>
+<div>
+  <footer>
+   <p>
+      Aldo Huancapaza Tintaya
+   </p>
+  </footer>
+</div>
+
+
+
+</body>
+</html>

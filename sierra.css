@@ -1,0 +1,132 @@
+/* --- General Styles --- */
+/* A professional reset to ensure consistent styling across all browsers */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set the overall background and font styles for the entire page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #444;
+    background-color: #f5f5f7; /* A soft, very light gray */
+    padding: 2rem;
+}
+
+/* --- Header and Footer --- */
+/* The top and bottom sections get a bold, modern look */
+header, footer {
+    text-align: center;
+    padding: 2.5rem 2rem;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* A beautiful gradient effect */
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adds depth to the title */
+}
+
+header p {
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* --- Main Content Layout --- */
+/* Using CSS Grid for a clean, organized, responsive layout */
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* --- Card-like Sections --- */
+/* Each dance description is a "card" with a border and shadow */
+section {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #e0e0e9; /* A subtle, elegant border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* A subtle "lift" effect when the user hovers over a section */
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Colorful headings to make each section pop */
+section h2 {
+    font-size: 2rem;
+    color: #e74c3c; /* A strong, vibrant red */
+    border-left: 5px solid #f39c12; /* A bold orange accent on the side */
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+section ul {
+    list-style-type: none; /* Removes the default bullet points */
+    padding: 0;
+}
+
+section li {
+    background-color: #f8f9fa; /* A very light background for list items */
+    margin-bottom: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #eceff1;
+}
+
+/* --- Slideshow Styles --- */
+/* The slideshow is also a card, spanning the entire width */
+.slideshow {
+    grid-column: 1 / -1; 
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    max-width: 900px;
+}
+
+.slideshow img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: opacity 0.5s ease;
+}
+
+/* --- Responsive Design --- */
+/* Ensures the website looks great on all devices, from phones to desktops */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    main {
+        grid-template-columns: 1fr;
+    }
+    header, footer, section, .slideshow {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    section h2 {
+        font-size: 1.5rem;
+    }
+}

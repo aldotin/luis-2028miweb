@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costa</title>
+    <link rel="stylesheet" href="selva.css">
+    <link rel="stylesheet" href="selva.js">
+</head>
+<body>
+<header>
+<h1>Danzas Tipicas  de la Selva Peruana</h1>
+<p>La selva peruana destaca por su inmensa biodiversidad y por ser el hogar de numerosos pueblos indígenas que conservan sus tradiciones ancestrales. Sus danzas y rituales están profundamente conectados con la naturaleza y la espiritualidad, celebrando la armonía con el bosque y sus recursos.</p>
+
+
+
+  <div class="slideshow">
+    <img id="imagen" src="" alt="Foto actual">
+  </div>
+
+  <script>
+    // Lista de imágenes
+    const imagenes = [
+       "selva/16.jpg",
+       "selva/17.jpg",
+       "selva/18.jpg",
+       "selva/19.jpg",
+       "selva/20.jpg",
+       "selva/21.jpg",
+        "selva/22.jpg"
+    
+    
+  
+    ];
+
+    let indice = 0;
+    const img = document.getElementById("imagen");
+
+    function mostrarSiguienteFoto() {
+      // Cambiar la imagen con opacidad
+      img.style.opacity = 0;
+
+      setTimeout(() => {
+        img.src = imagenes[indice];
+        img.style.opacity = 1;
+
+        indice = (indice + 1) % imagenes.length; // volver al inicio al final
+      }, 500);
+    }
+
+    // Mostrar la primera imagen al cargar
+    mostrarSiguienteFoto();
+
+    // Cambiar imagen cada 3 segundos
+    setInterval(mostrarSiguienteFoto, 3000);
+  </script>
+
+
+
+
+</header>
+
+
+
+
+</body>
+</html>
